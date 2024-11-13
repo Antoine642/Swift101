@@ -23,8 +23,7 @@
 ## 1/
 
 *Tester ce code, il devrait compiler.
-Cliquez sur le bouton “Ajouter” (de la liste), que se passe-t-il ? Pourquoi cela ne marche pas ?
-*
+Cliquez sur le bouton “Ajouter” (de la liste), que se passe-t-il ? Pourquoi cela ne marche pas ?*
 	__Une erreur s'affiche dans la console.
  	N'ayant pas de lien entre la class et la struct, aucune mise a jour ne peut s'appliquer entre la méthode et l'affichage (aucune mise a jour de l'état de l'inventaire)__
 
@@ -32,10 +31,15 @@ Cliquez sur le bouton “Ajouter” (de la liste), que se passe-t-il ? Pourquoi 
 
 *Utiliser @StateObject, ObservableObject et @Published pour que l’ajout d’un item fonctionne.
 Pourquoi cela fonctionne de nouveau ?
-Pourquoi utiliser @StateObject plutôt que @ObservedObject ou @State ?
-*
+Pourquoi utiliser @StateObject plutôt que @ObservedObject ou @State ?*
  	__"ObservableObject est utilisé pour créer des objets dont les propriétés publiées déclenchent automatiquement des mises à jour de l’interface utilisateur lorsqu’elles changent."
   	"@Published est utilisé pour déclarer des propriétés d’un objet observable dont la modification entraîne une mise à jour de l’interface utilisateur."
    	"StateObject est utilisé pour initialiser un objet observable en tant que propriété d’une vue et garantit que l’objet est créé une seule fois."
 	Tout cela permet de rendre l'objet observable et donc modifiable.
  	StateObject permet d'initialiser une unique fois l'objet et le rendre modifiable.__
+
+# Models
+## 2/
+*Pourquoi vous avez une erreur qui vous parle de Identifiable ? Comment la corriger ? Ajouter un id de type UUID à votre structure en le conformant à Identifiable.*
+__Car la propriété ne correspond pas au protocole Identifiable, il faut une propriété id unique.(UUID)__
+
